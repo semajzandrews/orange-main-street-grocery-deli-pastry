@@ -16,7 +16,7 @@ const TEL = "+18629303095";
 const ADDR = "58 Main St, City of Orange, NJ 07050";
 const px = (id: number, w = 1400) =>
   `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
-const IMG = { produce: 27926903, counter: 5473023, deli: 30790363, pastry: 20140442, bread: 263168 };
+const IMG = { produce: 27926903, counter: 5473023, deli: 30790363, delicase: 35474462, pastry: 20140442, bread: 263168 };
 
 export default function Page() {
   const [now, setNow] = useState<Date | null>(null);
@@ -84,7 +84,7 @@ export default function Page() {
           <div className="wrap reveal" style={{ marginTop: "clamp(34px,6vw,60px)" }}>
             <div style={{ display: "grid", gap: 12, gridTemplateColumns: "1.4fr 1fr 1fr", height: "clamp(220px,42vw,400px)" }}>
               <div className="shot" style={{ borderRadius: 16 }}><img src={px(IMG.produce)} alt="Fresh produce on display" /></div>
-              <div className="shot" style={{ borderRadius: 16 }}><img src={px(IMG.deli, 800)} alt="Deli sandwich" /></div>
+              <div className="shot" style={{ borderRadius: 16 }}><img src={px(IMG.delicase, 800)} alt="Deli counter case" /></div>
               <div className="shot" style={{ borderRadius: 16 }}><img src={px(IMG.pastry, 800)} alt="Fresh bread and pastry" /></div>
             </div>
           </div>

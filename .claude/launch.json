@@ -1,1 +1,1 @@
-{ "version": "0.0.1", "configurations": [ { "name": "orange-main-street-grocery-dev", "runtimeExecutable": "npm", "runtimeArgs": ["run","dev","--","-p","3102"], "port": 3102 } ] }
+{ "version": "0.0.1", "configurations": [ { "name": "orange-main-street-grocery-dev", "runtimeExecutable": "npm", "runtimeArgs": ["run","dev","--","-p","3102"], "port": 3102 }, { "name": "static-out", "runtimeExecutable": "python3", "runtimeArgs": ["-m","http.server","8123","--directory","out"], "port": 8123 } ] }
