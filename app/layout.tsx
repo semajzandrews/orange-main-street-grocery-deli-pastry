@@ -22,12 +22,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        {/* Fontshare — Tanker (heavy bodega-signage display) + General Sans (body). Distinct from Sudzy. */}
-        <link rel="preconnect" href="https://api.fontshare.com" />
-        <link
-          rel="stylesheet"
-          href="https://api.fontshare.com/v2/css?f[]=tanker@400&f[]=general-sans@500,600,700&f[]=clash-grotesk@600&display=swap"
-        />
+        {/* Fonts self-hosted from /public/fonts (see globals.css @font-face). No CDN dependency. */}
+        <link rel="preload" href="/fonts/tanker-400.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/general-sans-600.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body>{children}</body>
     </html>
