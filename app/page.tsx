@@ -15,7 +15,7 @@ const PHONE = "(862) 930-3095";
 const TEL = "+18629303095";
 const ADDR = "58 Main St, City of Orange, NJ 07050";
 // Imagery served locally from /public/img (no Pexels hotlinks -- avoids blank tiles when the CDN throttles).
-const IMG = { produce: "/img/produce.jpg", counter: "/img/counter.jpg", deli: "/img/deli.jpg", delicase: "/img/delicase.jpg", pastry: "/img/pastry.jpg" };
+const IMG = { produce: "/img/produce.jpg", counter: "/img/counter.jpg", deli: "/img/deli.jpg", delicase: "/img/delicase.jpg", pastry: "/img/pastry.jpg", bakery: "/img/bakery.jpg" };
 
 export default function Page() {
   const [now, setNow] = useState<Date | null>(null);
@@ -84,7 +84,7 @@ export default function Page() {
             <div style={{ display: "grid", gap: 12, gridTemplateColumns: "1.4fr 1fr 1fr", height: "clamp(220px,42vw,400px)" }}>
               <div className="shot" style={{ borderRadius: 16 }}><img src={IMG.produce} alt="Fresh produce on display" /></div>
               <div className="shot" style={{ borderRadius: 16 }}><img src={IMG.delicase} alt="Deli counter case" /></div>
-              <div className="shot" style={{ borderRadius: 16 }}><img src={IMG.pastry} alt="Fresh bread and pastry" /></div>
+              <div className="shot" style={{ borderRadius: 16 }}><img src={IMG.bakery} alt="Fresh croissants and pastries" /></div>
             </div>
           </div>
         </section>
