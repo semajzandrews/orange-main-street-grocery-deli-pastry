@@ -14,9 +14,8 @@ const LIME = "#7fae2b";
 const PHONE = "(862) 930-3095";
 const TEL = "+18629303095";
 const ADDR = "58 Main St, City of Orange, NJ 07050";
-const px = (id: number, w = 1400) =>
-  `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
-const IMG = { produce: 27926903, counter: 5473023, deli: 30790363, delicase: 35474462, pastry: 20140442, bread: 263168 };
+// Imagery served locally from /public/img (no Pexels hotlinks -- avoids blank tiles when the CDN throttles).
+const IMG = { produce: "/img/produce.jpg", counter: "/img/counter.jpg", deli: "/img/deli.jpg", delicase: "/img/delicase.jpg", pastry: "/img/pastry.jpg" };
 
 export default function Page() {
   const [now, setNow] = useState<Date | null>(null);
@@ -83,9 +82,9 @@ export default function Page() {
           {/* abundance triptych */}
           <div className="wrap reveal" style={{ marginTop: "clamp(34px,6vw,60px)" }}>
             <div style={{ display: "grid", gap: 12, gridTemplateColumns: "1.4fr 1fr 1fr", height: "clamp(220px,42vw,400px)" }}>
-              <div className="shot" style={{ borderRadius: 16 }}><img src={px(IMG.produce)} alt="Fresh produce on display" /></div>
-              <div className="shot" style={{ borderRadius: 16 }}><img src={px(IMG.delicase, 800)} alt="Deli counter case" /></div>
-              <div className="shot" style={{ borderRadius: 16 }}><img src={px(IMG.pastry, 800)} alt="Fresh bread and pastry" /></div>
+              <div className="shot" style={{ borderRadius: 16 }}><img src={IMG.produce} alt="Fresh produce on display" /></div>
+              <div className="shot" style={{ borderRadius: 16 }}><img src={IMG.delicase} alt="Deli counter case" /></div>
+              <div className="shot" style={{ borderRadius: 16 }}><img src={IMG.pastry} alt="Fresh bread and pastry" /></div>
             </div>
           </div>
         </section>
@@ -103,7 +102,7 @@ export default function Page() {
                 { img: IMG.pastry, n: "Pastry", d: "The bakery case. Fresh bread and pastry, in early.", c: SAFFRON },
               ].map((p, i) => (
                 <div key={p.n} className="reveal" style={{ borderRadius: 18, overflow: "hidden", background: CREAM, border: "1px solid rgba(42,28,16,0.08)" }}>
-                  <div className="shot" style={{ aspectRatio: "16/11" }}><img src={px(p.img, 800)} alt={p.n} loading="lazy" /></div>
+                  <div className="shot" style={{ aspectRatio: "16/11" }}><img src={p.img} alt={p.n} loading="lazy" /></div>
                   <div style={{ padding: "22px 22px 26px" }}>
                     <h3 className="display" style={{ fontSize: 30, margin: "0 0 10px", color: INK }}>
                       {p.n}<span style={{ color: p.c }}>.</span>
