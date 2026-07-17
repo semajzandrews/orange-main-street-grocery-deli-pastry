@@ -174,7 +174,7 @@ export default function Page() {
             <div style={{ display: "flex", flexWrap: "wrap", gap: 28, justifyContent: "space-between", alignItems: "flex-end", marginTop: 26 }}>
               <p style={{ color: INK_SOFT, margin: 0, lineHeight: 1.7, fontSize: 14 }}>{ADDR}<br />{PHONE} · Open 7 days</p>
               <a href="https://bysemaj.com" target="_blank" rel="noreferrer" className="mono" style={{ fontSize: 11, letterSpacing: "0.14em", color: INK_SOFT, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 7 }}>
-                <span style={{ width: 5, height: 5, borderRadius: "50%", background: TOMATO }} />built by bysemaj.com
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: TOMATO }} />built bysemaj.com
               </a>
             </div>
           </div>
